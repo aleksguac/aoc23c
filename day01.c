@@ -41,12 +41,10 @@ int main() {
     return 1;
   }
 
+  char line[MAXLEN] = {0};
   int p1 = 0;
   int p2 = 0;
-  while (true) {
-    char line[MAXLEN] = {0};
-    if (!fgets(line, MAXLEN, f)) { break; }
-    
+  while (fgets(line, MAXLEN, f)) {
     int p1digits[] = {0, 0};
     int p2digits[] = {0, 0};
     for (int i = 0; i < MAXLEN; i++) {
